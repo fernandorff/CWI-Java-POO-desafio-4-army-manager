@@ -34,7 +34,7 @@ public class Veiculo {
 
     public void tripulacaoValida() {
 
-        if (!(this.tripulacao.size() > 30)) {
+        if (this.tripulacao.size() > 30) {
             throw new TripulacaoInvalidaException();
         }
 

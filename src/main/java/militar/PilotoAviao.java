@@ -20,9 +20,6 @@ public class PilotoAviao extends Militar implements HabilitacaoAviao {
         this.validadeHabilitacaoAviao = data;
     }
 
-    public LocalDate getValidadeHabilitacaoAviao() {
 
-        return validadeHabilitacaoAviao;
-    }
 
 }

@@ -26,9 +26,10 @@ public class Tanque extends Veiculo {
 
     }
 
+    @Override
     public void tripulacaoValida() {
 
-        if (!(this.tripulacao.size() == 3)) {
+        if (this.tripulacao.size() != 3) {
             throw new TripulacaoInvalidaException();
         }
 

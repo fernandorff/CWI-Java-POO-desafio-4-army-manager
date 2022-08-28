@@ -20,9 +20,6 @@ public class PilotoHelicoptero extends Militar implements HabilitacaoHelicoptero
         this.validadeHabilitacaoHelicoptero = data;
     }
 
-    public LocalDate getValidadeHabilitacaoHelicoptero() {
 
-        return validadeHabilitacaoHelicoptero;
-    }
 
 }

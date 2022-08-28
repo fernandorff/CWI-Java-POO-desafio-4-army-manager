@@ -20,9 +20,6 @@ public class PilotoCaminhao extends Militar implements HabilitacaoCaminhao {
 
     }
 
-    public LocalDate getValidadeHabilitacaoCaminhao() {
 
-        return validadeHabilitacaoCaminhao;
-    }
 
 }

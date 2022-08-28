@@ -26,6 +26,7 @@ public class Aviao extends Veiculo {
 
     }
 
+    @Override
     public void tripulacaoValida() {
 
         if (tripulacao.size() > 1) {

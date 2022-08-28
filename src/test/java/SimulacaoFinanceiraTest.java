@@ -26,7 +26,7 @@ public class SimulacaoFinanceiraTest {
 
     EspecialistaTerrestre expertTerra = new EspecialistaTerrestre(8000, LocalDate.now().plusDays(100), LocalDate.now().plusDays(100));
 
-    Elite elite = new Elite(16000, LocalDate.now().plusDays(100), LocalDate.now().plusDays(20), LocalDate.now().plusDays(100), LocalDate.now().plusDays(100));
+    Elite elite = new Elite(16000, LocalDate.now().plusDays(100), LocalDate.now().plusDays(100), LocalDate.now().plusDays(100), LocalDate.now().plusDays(100));
 
     // Criando veiculos
     Tanque tanque = new Tanque(5, 10, expertTerra, pilotoDeTanque, soldado, soldado);

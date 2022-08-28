@@ -80,6 +80,8 @@ public class SimulacaoFinanceira {
 
     public int getCustoTotalDaMissao() {
 
+        this.checarValidadeDasHabilitacoes();
+
         this.todasTripulacoesValidas();
 
         custoTotalDaMissao = 0;

@@ -1,9 +1,10 @@
 package veiculo;
 
 import erros.TripulacaoInvalidaException;
-import militar.*;
-
-import java.util.Collections;
+import militar.Elite;
+import militar.EspecialistaTerrestre;
+import militar.Militar;
+import militar.PilotoCaminhao;
 
 public class Caminhao extends Veiculo {
 
@@ -25,6 +26,7 @@ public class Caminhao extends Veiculo {
 
     }
 
+    @Override
     public void tripulacaoValida() {
 
         if (tripulacao.size() < 5 || tripulacao.size() > 30) {
