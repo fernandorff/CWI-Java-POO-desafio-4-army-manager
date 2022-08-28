@@ -11,8 +11,6 @@ import java.util.List;
 
 public class Veiculo {
 
-    LocalDate dataDeHabilitacaoPiloto;
-
     public List<Militar> tripulacao = new ArrayList<>();
 
     Militar piloto;
