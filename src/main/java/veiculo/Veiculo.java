@@ -9,15 +9,15 @@ import java.util.List;
 
 public class Veiculo {
 
-    public List<Militar> tripulacao = new ArrayList<>();
+    private final List<Militar> tripulacao = new ArrayList<>();
 
-    Militar piloto;
+    private final Militar piloto;
 
-    double kmPorLitro;
+    private final double kmPorLitro;
 
-    double precoDoLitroDeCombustivel;
+    private final double precoDoLitroDeCombustivel;
 
-    int custoDoVeiculoPorMes;
+    private int custoDoVeiculoPorMes;
 
     public Veiculo(double kmPorLitro, double precoDoLitroDeCombustivel, Militar piloto, Militar... argsTripulantes) {
 
@@ -30,13 +30,10 @@ public class Veiculo {
 
     public void tripulacaoValida() {
 
-        if (this.tripulacao.size() > 30) {
-            throw new TripulacaoInvalidaException();
-        }
 
     }
 
-    public int getCustoDoVeiculoPorMes() {
+    public int getCustoDosSalariosDaTripulacaoDoVeiculoPorMes() {
 
         custoDoVeiculoPorMes = 0;
 
@@ -66,15 +63,9 @@ public class Veiculo {
         return piloto;
     }
 
-    @Override
-    public String toString() {
+    public List<Militar> getTripulacao() {
 
-        return this.getClass().getSimpleName() +
-                "piloto=" + piloto +
-                ", kmPorLitro=" + kmPorLitro +
-                ", precoDoLitroDeCombustivel=" + precoDoLitroDeCombustivel +
-                ", tripulacao=" + tripulacao +
-                '}';
+        return tripulacao;
     }
 
 }

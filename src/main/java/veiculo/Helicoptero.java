@@ -29,7 +29,7 @@ public class Helicoptero extends Veiculo {
     @Override
     public void tripulacaoValida() {
 
-        if (tripulacao.size() > 10) {
+        if (this.getTripulacao().size() > 10) {
             throw new TripulacaoInvalidaException();
         }
 

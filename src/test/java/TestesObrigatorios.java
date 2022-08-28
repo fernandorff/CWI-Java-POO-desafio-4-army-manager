@@ -11,7 +11,7 @@ import veiculo.Tanque;
 
 import java.time.LocalDate;
 
-public class SimulacaoFinanceiraTest {
+public class TestesObrigatorios {
 
     // Criando militares
     Militar soldado = new Militar(2000);
@@ -59,7 +59,7 @@ public class SimulacaoFinanceiraTest {
     Helicoptero helicopteroComElite = new Helicoptero(30, 20, elite, soldado, soldado);
 
     @Test
-    public void deveCalcularOCustoTotalDaMissaoComCombustivelESalariosCorretamente() {
+    public void deveCalcularOCustoTotalDaMissaoCorretamente() {
 
         SimulacaoFinanceira simulacao = new SimulacaoFinanceira(2000, 2, aviaoComPilotoDeAviao, aviaoComEspecialistaAereo, aviaoComElite, caminhaoComPilotoDeCaminhao, caminhaoComEspecialistaTerrestre, caminhaoComElite, helicopteroComPilotoDeHelicoptero, helicopteroComEspecialistaAereo, helicopteroComElite, tanqueComPilotoDeTanque, tanqueComEspecialistaTerrestre, tanqueComElite);
 
@@ -67,76 +67,29 @@ public class SimulacaoFinanceiraTest {
 
     }
 
-    @Test(expected = TripulacaoInvalidaException.class)
-    public void deveRetornarErroQuandoTripulacaoDoTanqueInvalida() {
+    @Test
+    public void deveCalcularOCustoTotalComCombustivelCorretamente() {
 
-        Tanque tanqueBugado = new Tanque(10, 10, elite, soldado, soldado);
+        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(2000, 2, aviaoComPilotoDeAviao, aviaoComEspecialistaAereo, aviaoComElite, caminhaoComPilotoDeCaminhao, caminhaoComEspecialistaTerrestre, caminhaoComElite, helicopteroComPilotoDeHelicoptero, helicopteroComEspecialistaAereo, helicopteroComElite, tanqueComPilotoDeTanque, tanqueComEspecialistaTerrestre, tanqueComElite);
 
-        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 2, tanqueBugado);
 
-        simulacao.getCustoTotalDaMissao();
+
+        Assert.assertEquals(10500000, simulacao.getCustoDoCombustivelDaMissao(), 0.0000001);
+
     }
 
-    @Test(expected = TripulacaoInvalidaException.class)
-    public void deveRetornarErroQuandoTripulacaoDoCaminhaoInvalida() {
+    @Test
+    public void deveCalcularOCustoToralComSalariosCorretamente() {
 
-        Caminhao caminhaoBugado = new Caminhao(10, 10, elite, soldado, soldado,soldado,soldado);
+        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(2000, 2, aviaoComPilotoDeAviao, aviaoComEspecialistaAereo, aviaoComElite, caminhaoComPilotoDeCaminhao, caminhaoComEspecialistaTerrestre, caminhaoComElite, helicopteroComPilotoDeHelicoptero, helicopteroComEspecialistaAereo, helicopteroComElite, tanqueComPilotoDeTanque, tanqueComEspecialistaTerrestre, tanqueComElite);
 
-        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 2, caminhaoBugado);
 
-        simulacao.getCustoTotalDaMissao();
+
+        Assert.assertEquals(388000, simulacao.getCustoDosSalariosDaMissao(), 0.0000001);
+
     }
 
-    @Test(expected = TripulacaoInvalidaException.class)
-    public void deveRetornarErroQuandoTripulacaoDoHelicopteroInvalida() {
 
-        Helicoptero helicopteroBugado = new Helicoptero(10, 10, elite, soldado, soldado, soldado, soldado, soldado, soldado, soldado, soldado, soldado, soldado, soldado, soldado);
 
-        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 2, helicopteroBugado);
-
-        simulacao.getCustoTotalDaMissao();
-    }
-
-    @Test(expected = TripulacaoInvalidaException.class)
-    public void deveRetornarErroQuandoTripulacaoDoAviaoInvalida() {
-
-        Aviao aviaoBugado = new Aviao(10, 10, elite, soldado, soldado);
-
-        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 2, aviaoBugado);
-
-        simulacao.getCustoTotalDaMissao();
-    }
-
-    @Test(expected = HabilitacaoExpiradaException.class)
-    public void deveRetornarErroQuandoHabilitacaoDoTanqueNaoTemValidadeSuficienteParaMissao() {
-
-        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 5, tanqueComElite);
-
-        simulacao.getCustoTotalDaMissao();
-    }
-
-    @Test(expected = HabilitacaoExpiradaException.class)
-    public void deveRetornarErroQuandoHabilitacaoDoCaminhaoNaoTemValidadeSuficienteParaMissao() {
-
-        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 5, caminhaoComElite);
-
-        simulacao.getCustoTotalDaMissao();
-    }
-
-    @Test(expected = HabilitacaoExpiradaException.class)
-    public void deveRetornarErroQuandoHabilitacaoDoHelicopteroNaoTemValidadeSuficienteParaMissao() {
-
-        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 5, helicopteroComElite);
-
-        simulacao.getCustoTotalDaMissao();
-    }
-
-    @Test(expected = HabilitacaoExpiradaException.class)
-    public void deveRetornarErroQuandoHabilitacaoDoAviaoNaoTemValidadeSuficienteParaMissao() {
-
-        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 5, aviaoComElite);
-
-        simulacao.getCustoTotalDaMissao();
-    }
 
 }

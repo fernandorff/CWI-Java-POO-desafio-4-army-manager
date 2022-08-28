@@ -29,7 +29,7 @@ public class Caminhao extends Veiculo {
     @Override
     public void tripulacaoValida() {
 
-        if (tripulacao.size() < 5 || tripulacao.size() > 30) {
+        if (this.getTripulacao().size() < 5 || this.getTripulacao().size() > 30) {
             throw new TripulacaoInvalidaException();
         }
 

@@ -29,7 +29,7 @@ public class Aviao extends Veiculo {
     @Override
     public void tripulacaoValida() {
 
-        if (tripulacao.size() > 1) {
+        if (this.getTripulacao().size() > 1) {
             throw new TripulacaoInvalidaException();
         }
 
