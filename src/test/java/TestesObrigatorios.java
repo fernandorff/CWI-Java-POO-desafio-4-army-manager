@@ -141,7 +141,7 @@ public class TestesObrigatorios {
     @Test(expected = TripulacaoInvalidaException.class)
     public void deveRetornarErroQuandoTripulacaoDoCarroComumInvalida() {
 
-        Veiculo carroComumSuperLotado = new Veiculo(10, 5, soldado, soldado, soldado, soldado, soldado, soldado);
+        Veiculo carroComumSuperLotado = new Veiculo(10, 5, soldado, soldado, soldado, soldado, soldado, soldado, soldado);
 
         SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 2, carroComumSuperLotado);
 
