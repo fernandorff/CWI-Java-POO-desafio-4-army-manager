@@ -55,14 +55,16 @@ public class TestesObrigatorios {
 
     Helicoptero helicopteroComElite = new Helicoptero(30, 20, elite, soldado, soldado);
 
+    // Criando Veiculo generico = carroComum
 
+    Veiculo carroComum = new Veiculo(5, 10, soldado, soldado, soldado, soldado, soldado);
 
     @Test
     public void deveCalcularOCustoTotalDaMissaoCorretamente() {
 
-        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(2000, 2, aviaoComPilotoDeAviao, aviaoComEspecialistaAereo, aviaoComElite, caminhaoComPilotoDeCaminhao, caminhaoComEspecialistaTerrestre, caminhaoComElite, helicopteroComPilotoDeHelicoptero, helicopteroComEspecialistaAereo, helicopteroComElite, tanqueComPilotoDeTanque, tanqueComEspecialistaTerrestre, tanqueComElite);
+        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(2000, 2, aviaoComPilotoDeAviao, aviaoComEspecialistaAereo, aviaoComElite, caminhaoComPilotoDeCaminhao, caminhaoComEspecialistaTerrestre, caminhaoComElite, helicopteroComPilotoDeHelicoptero, helicopteroComEspecialistaAereo, helicopteroComElite, tanqueComPilotoDeTanque, tanqueComEspecialistaTerrestre, tanqueComElite, carroComum);
 
-        Assert.assertEquals(10888000, simulacao.getCustoTotalDaMissao(), 0.0000001);
+        Assert.assertEquals(11008000, simulacao.getCustoTotalDaMissao(), 0.0000001);
 
     }
 
