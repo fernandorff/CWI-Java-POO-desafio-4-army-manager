@@ -51,8 +51,6 @@ public class Veiculo {
         return custoDoVeiculoPorMes;
     }
 
-
-
     public double getKmPorLitro() {
 
         return kmPorLitro;

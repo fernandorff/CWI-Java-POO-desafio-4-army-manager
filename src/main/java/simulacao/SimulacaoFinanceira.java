@@ -60,8 +60,6 @@ public class SimulacaoFinanceira {
 
     }
 
-
-
     public void todasTripulacoesValidas() {
 
         for (Veiculo veiculo : veiculosDaMissao) {
@@ -69,7 +67,6 @@ public class SimulacaoFinanceira {
 
         }
     }
-
 
     public int getCustoTotalDaMissao() {
 
