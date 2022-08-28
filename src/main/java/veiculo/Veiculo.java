@@ -1,6 +1,6 @@
 package veiculo;
 
-import erros.TripulacaoInvalidaException;
+
 import militar.Militar;
 
 import java.util.ArrayList;
@@ -17,7 +17,6 @@ public class Veiculo {
 
     private final double precoDoLitroDeCombustivel;
 
-    private int custoDoVeiculoPorMes;
 
     public Veiculo(double kmPorLitro, double precoDoLitroDeCombustivel, Militar piloto, Militar... argsTripulantes) {
 
@@ -29,13 +28,13 @@ public class Veiculo {
     }
 
     public void tripulacaoValida() {
-
+        // metodo vazio para aplicacao de polimorfismo
 
     }
 
     public int getCustoDosSalariosDaTripulacaoDoVeiculoPorMes() {
 
-        custoDoVeiculoPorMes = 0;
+        int custoDoVeiculoPorMes = 0;
 
         custoDoVeiculoPorMes += this.piloto.getSalario();
 

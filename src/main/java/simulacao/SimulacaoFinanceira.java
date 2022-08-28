@@ -1,10 +1,7 @@
 package simulacao;
 
 import erros.HabilitacaoExpiradaException;
-import habilitacoes.HabilitacaoAviao;
-import habilitacoes.HabilitacaoCaminhao;
-import habilitacoes.HabilitacaoHelicoptero;
-import habilitacoes.HabilitacaoTanque;
+import habilitacoes.*;
 import veiculo.Veiculo;
 
 import java.time.LocalDate;
@@ -19,12 +16,6 @@ public class SimulacaoFinanceira {
     private final List<Veiculo> veiculosDaMissao = new ArrayList<>();
 
     private int meses;
-
-    private int custoTotalDaMissao;
-
-    private int custoDoCombustivelDaMissao;
-
-    private int custoDosSalariosDaMissao;
 
     LocalDate dataFinalDaMissao;
 
@@ -78,14 +69,14 @@ public class SimulacaoFinanceira {
 
         this.todasTripulacoesValidas();
 
-        custoTotalDaMissao = getCustoDoCombustivelDaMissao() + getCustoDosSalariosDaMissao();
+        return getCustoDoCombustivelDaMissao() + getCustoDosSalariosDaMissao();
 
-        return custoTotalDaMissao;
+
     }
 
     public int getCustoDoCombustivelDaMissao() {
 
-        custoDoCombustivelDaMissao = 0;
+        int custoDoCombustivelDaMissao = 0;
 
         for (Veiculo veiculo : veiculosDaMissao) {
             custoDoCombustivelDaMissao += veiculo.getKmPorLitro() * veiculo.getPrecoDoLitroDeCombustivel() * this.distanciaDaViagem;
@@ -98,7 +89,7 @@ public class SimulacaoFinanceira {
 
     public int getCustoDosSalariosDaMissao() {
 
-        custoDosSalariosDaMissao = 0;
+        int custoDosSalariosDaMissao = 0;
 
         for (Veiculo veiculo : veiculosDaMissao) {
             custoDosSalariosDaMissao += veiculo.getCustoDosSalariosDaTripulacaoDoVeiculoPorMes() * meses;
