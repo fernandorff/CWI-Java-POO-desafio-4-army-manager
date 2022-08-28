@@ -2,7 +2,7 @@ package simulacao;
 
 import erros.HabilitacaoExpiradaException;
 import habilitacoes.*;
-import veiculo.Veiculo;
+import veiculo.*;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -34,19 +34,19 @@ public class SimulacaoFinanceira {
 
         for (Veiculo veiculo : veiculosDaMissao) {
 
-            if (veiculo.getPiloto() instanceof HabilitacaoAviao && dataFinalDaMissao.isAfter(veiculo.getPiloto().getValidadeHabilitacaoAviao())) {
+            if (veiculo instanceof Aviao && dataFinalDaMissao.isAfter(veiculo.getPiloto().getValidadeHabilitacaoAviao())) {
                 throw new HabilitacaoExpiradaException();
             }
 
-            if (veiculo.getPiloto() instanceof HabilitacaoCaminhao && dataFinalDaMissao.isAfter(veiculo.getPiloto().getValidadeHabilitacaoCaminhao())) {
+            if (veiculo instanceof Caminhao && dataFinalDaMissao.isAfter(veiculo.getPiloto().getValidadeHabilitacaoCaminhao())) {
                 throw new HabilitacaoExpiradaException();
             }
 
-            if (veiculo.getPiloto() instanceof HabilitacaoHelicoptero && dataFinalDaMissao.isAfter(veiculo.getPiloto().getValidadeHabilitacaoHelicoptero())) {
+            if (veiculo instanceof Helicoptero && dataFinalDaMissao.isAfter(veiculo.getPiloto().getValidadeHabilitacaoHelicoptero())) {
                 throw new HabilitacaoExpiradaException();
             }
 
-            if (veiculo.getPiloto() instanceof HabilitacaoTanque && dataFinalDaMissao.isAfter(veiculo.getPiloto().getValidadeHabilitacaoTanque())) {
+            if (veiculo instanceof Tanque && dataFinalDaMissao.isAfter(veiculo.getPiloto().getValidadeHabilitacaoTanque())) {
                 throw new HabilitacaoExpiradaException();
 
             }

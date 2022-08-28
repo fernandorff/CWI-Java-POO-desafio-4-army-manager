@@ -1,6 +1,7 @@
 package veiculo;
 
 
+import erros.TripulacaoInvalidaException;
 import militar.Militar;
 
 import java.util.ArrayList;
@@ -28,7 +29,9 @@ public class Veiculo {
     }
 
     public void tripulacaoValida() {
-        // metodo vazio para aplicacao de polimorfismo
+        if (this.getTripulacao().size() > 4) {
+            throw new TripulacaoInvalidaException();
+        }
 
     }
 

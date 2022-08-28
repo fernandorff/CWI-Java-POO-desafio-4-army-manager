@@ -4,10 +4,7 @@ import militar.*;
 import org.junit.Assert;
 import org.junit.Test;
 import simulacao.SimulacaoFinanceira;
-import veiculo.Aviao;
-import veiculo.Caminhao;
-import veiculo.Helicoptero;
-import veiculo.Tanque;
+import veiculo.*;
 
 import java.time.LocalDate;
 
@@ -57,6 +54,8 @@ public class TestesObrigatorios {
     Helicoptero helicopteroComEspecialistaAereo = new Helicoptero(30, 20, especialistaAereo, soldado, soldado);
 
     Helicoptero helicopteroComElite = new Helicoptero(30, 20, elite, soldado, soldado);
+
+
 
     @Test
     public void deveCalcularOCustoTotalDaMissaoCorretamente() {
@@ -135,6 +134,16 @@ public class TestesObrigatorios {
         Aviao aviaoBugado = new Aviao(10, 10, elite, soldado, soldado);
 
         SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 2, aviaoBugado);
+
+        simulacao.getCustoTotalDaMissao();
+    }
+
+    @Test(expected = TripulacaoInvalidaException.class)
+    public void deveRetornarErroQuandoTripulacaoDoCarroComumInvalida() {
+
+        Veiculo carroComumSuperLotado = new Veiculo(10, 5, soldado, soldado, soldado, soldado, soldado, soldado);
+
+        SimulacaoFinanceira simulacao = new SimulacaoFinanceira(1000, 2, carroComumSuperLotado);
 
         simulacao.getCustoTotalDaMissao();
     }
