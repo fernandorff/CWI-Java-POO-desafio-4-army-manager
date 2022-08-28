@@ -60,10 +60,7 @@ public class SimulacaoFinanceira {
 
     }
 
-    public LocalDate getDataFinalDaMissao() {
 
-        return dataFinalDaMissao;
-    }
 
     public void todasTripulacoesValidas() {
 
@@ -73,10 +70,6 @@ public class SimulacaoFinanceira {
         }
     }
 
-    public List<Veiculo> getVeiculosDaMissao() {
-
-        return veiculosDaMissao;
-    }
 
     public int getCustoTotalDaMissao() {
 

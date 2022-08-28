@@ -7,8 +7,6 @@ import java.time.LocalDate;
 
 public class EspecialistaTerrestre extends Militar implements HabilitacaoCaminhao, HabilitacaoTanque {
 
-
-
     public EspecialistaTerrestre(int salario, LocalDate validadeHabilitacaoCaminhao, LocalDate validadeHabilitacaoTanque) {
 
         super(salario);

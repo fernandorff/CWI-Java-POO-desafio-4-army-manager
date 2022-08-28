@@ -7,8 +7,6 @@ import java.time.LocalDate;
 
 public class EspecialistaAereo extends Militar implements HabilitacaoAviao, HabilitacaoHelicoptero {
 
-
-
     public EspecialistaAereo(int salario, LocalDate validadeHabilitacaoAviao, LocalDate validadeHabilitacaoHelicoptero) {
 
         super(salario);

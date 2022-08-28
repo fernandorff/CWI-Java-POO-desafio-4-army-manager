@@ -3,10 +3,8 @@ package veiculo;
 import erros.TripulacaoInvalidaException;
 import militar.Militar;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 
 public class Veiculo {
@@ -53,10 +51,7 @@ public class Veiculo {
         return custoDoVeiculoPorMes;
     }
 
-    public List<Militar> getTripulacao() {
 
-        return this.tripulacao;
-    }
 
     public double getKmPorLitro() {
 

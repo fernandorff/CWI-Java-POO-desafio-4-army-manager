@@ -9,7 +9,6 @@ import java.time.LocalDate;
 
 public class Elite extends Militar implements HabilitacaoAviao, HabilitacaoHelicoptero, HabilitacaoCaminhao, HabilitacaoTanque {
 
-
     public Elite(int salario, LocalDate validadeHabilitacaoAviao, LocalDate validadeHabilitacaoHelicoptero, LocalDate validadeHabilitacaoCaminhao, LocalDate validadeHabilitacaoTanque) {
 
         super(salario);

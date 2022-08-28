@@ -6,8 +6,6 @@ import java.time.LocalDate;
 
 public class PilotoHelicoptero extends Militar implements HabilitacaoHelicoptero {
 
-
-
     public PilotoHelicoptero(int salario, LocalDate validadeHabilitacaoHelicoptero) {
 
         super(salario);
@@ -19,7 +17,5 @@ public class PilotoHelicoptero extends Militar implements HabilitacaoHelicoptero
 
         this.validadeHabilitacaoHelicoptero = data;
     }
-
-
 
 }
