@@ -17,14 +17,14 @@ Existem 8 tipos de militares:
 - PilotoCaminhao
 - PilotoHelicoptero
 - PilotoTanque
-- Militar
+- militar.Militar
 
 Cada um conta com as seguintes habilidades:
 - **Elite:** é capaz de pilotar qualquer coisa
 - **Especialista Do Ar:** é capaz de pilotar qualquer veículo aereo
 - **Especialista Terrestre:** é capaz de pilotar qualquer veículo terrestre
 - **Piloto de Aviao / Caminhão / Helicoptero / Tanque:** só pilota seu respectivo veículo
-- **Militar:** não sabe pilotar nenhum veículo.
+- **militar.Militar:** não sabe pilotar nenhum veículo.
 
 Todos os tipos de militares tem um atributo de salário. Os militares que sabem pilotar algum veículo tem um atributo que é a validade da licença de pilotagem para o mesmo. Por exemplo:
 
@@ -133,11 +133,11 @@ private Tanque criarTanque() {
             LocalDate.now().plusDays(20),
             LocalDate.now().plusDays(20));
 
-    ArrayList<Militar> tripulacao = new ArrayList<>();
+    ArrayList<militar.Militar> tripulacao = new ArrayList<>();
 
     tripulacao.add(new PilotoTanqueImpl(BigDecimal.valueOf(2500), LocalDate.now().minusYears(1)));
-    tripulacao.add(new Militar(BigDecimal.valueOf(600)));
-    tripulacao.add(new Militar(BigDecimal.valueOf(600)));
+    tripulacao.add(new militar.Militar(BigDecimal.valueOf(600)));
+    tripulacao.add(new militar.Militar(BigDecimal.valueOf(600)));
 
     return new Tanque(piloto, tripulacao, 0.22, BigDecimal.valueOf(3.46));
 }
@@ -146,9 +146,9 @@ private Aviao criarAviao() {
 
     EspecialistaDoAr piloto = new EspecialistaDoAr(BigDecimal.valueOf(7000), LocalDate.now().plusDays(-20), LocalDate.now().plusDays(20));
 
-    ArrayList<Militar> tripulacao = new ArrayList<>();
+    ArrayList<militar.Militar> tripulacao = new ArrayList<>();
 
-    tripulacao.add(new Militar(BigDecimal.valueOf(2500)));
+    tripulacao.add(new militar.Militar(BigDecimal.valueOf(2500)));
 
     return new Aviao(piloto, tripulacao, 0.14, BigDecimal.valueOf(10));
 }
