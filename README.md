@@ -1,3 +1,7 @@
+### Code overview SonarQube
+
+![image](https://user-images.githubusercontent.com/101672271/191234921-a1d490eb-2f95-4929-b2ab-c8fe56d6549c.png)
+
 # Army Manager
 
 Com os constates conflitos na Síria, os terroristas do estado islamico, a disputa de territorio entre Japão e China pelas ilhas Senkaku/Diaoyu 
